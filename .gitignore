@@ -1,0 +1,5 @@
+# Ignorar el directorio del entorno virtual
+env/
+
+# Ignorar el archivo .env dentro de la carpeta simple_login
+simple_login/.env

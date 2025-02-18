@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Bienvenido, {{ user.username }}!</h2>
+    <p>Este es tu panel de control.</p>
+    <a href="{% url 'login:logout' %}">Cerrar sesión</a>
+</body>
+</html>
