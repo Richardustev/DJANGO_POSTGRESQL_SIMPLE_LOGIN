@@ -1,14 +1,14 @@
 # Simple Login Page
 A simple login page created in Django, perfect for recycling in future projects. Built in an afternoon of boredom, this application is designed to be flexible and easy to adapt to different databases. While it was originally developed using a PostgreSQL database, it can be easily configured to work with other databases by referring to the relevant documentation.
 
-# ✨ Features
+## ✨ Features
 Simple and Clean Design: Easy-to-use login interface.
 
 Flexible Database Configuration: Originally built for PostgreSQL, but can be adapted to other databases.
 
 Quick Setup: Get up and running in no time.
 
-# 🛠️ Installation
+## 🛠️ Installation
 Clone the repository:
 ```
 git clone https://github.com/yourusername/simple-login.git
@@ -41,5 +41,5 @@ python manage.py runserver
 Access the application:
 Open your browser and go to http://127.0.0.1:8000/ to see the login page in action.
 
-# 🚀 Usage
+## 🚀 Usage
 This login page can be used as a starting point for any project requiring user authentication. Feel free to customize and extend it to fit your needs.
