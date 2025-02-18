@@ -10,29 +10,31 @@ Quick Setup: Get up and running in no time.
 
 # 🛠️ Installation
 Clone the repository:
-
-*git clone https://github.com/yourusername/simple-login.git*
-*cd simple-login*
-
+```
+git clone https://github.com/yourusername/simple-login.git
+cd simple-login
+```
 Install dependencies:
 Make sure to install all the required packages listed in requirements.txt. They are not just for decoration!
-
-*pip install -r requirements.txt*
-
+```
+pip install -r requirements.txt
+```
 Configure the database:
 
 Create a .env file in the simple_login directory with the following structure:
+```
 DB_NAME=your_database_name
 DB_USER=your_database_user
 DB_PASSWORD=your_database_password
 DB_HOST=your_database_host
 DB_PORT=your_database_port
+```
 Replace the placeholders with your actual database credentials.
 
 Run migrations:
-
-*python manage.py migrate*
-
+```
+python manage.py migrate
+```
 Start the development server:
 
 python manage.py runserver
