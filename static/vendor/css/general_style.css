@@ -1,0 +1,30 @@
+/*Input fields*/
+.input-field {
+    margin-bottom: 15px; /* Espacio entre cada campo */
+}
+
+.input-field label {
+    display: block; /* Hace que el label ocupe toda la línea */
+    margin-bottom: 5px; /* Espacio entre el label y el input */
+    font-weight: bold; /* Opcional: Hace el texto del label más grueso */
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/*Buttons*/
+.btn{
+    background-color: #a7ffeb;
+}
+
+/*Errors*/
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px; /* Espacio entre el input y el mensaje de error */
+}

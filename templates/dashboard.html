@@ -1,13 +1,72 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    <h2>Bienvenido, {{ user.username }}!</h2>
-    <p>Este es tu panel de control.</p>
-    <a href="{% url 'login:logout' %}">Cerrar sesión</a>
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<body style="background-color: #6a1b9a;">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <div class="card-panel center-align">
+                    <h2>Bienvenido, {{ user.username }}!</h2>
+                    <p>Este es tu panel de control.</p>
+
+                    <!-- Tarjetas de estadísticas -->
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">Tareas completadas</span>
+                                    <h4>25</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">Mensajes nuevos</span>
+                                    <h4>3</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">Proyectos activos</span>
+                                    <h4>5</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón de acción -->
+                    <div class="row">
+                        <div class="col s12">
+                            <a class="btn waves-effect waves-light purple" href="#">
+                                <i class="material-icons left">add</i>
+                                Crear nuevo proyecto
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Enlace para cerrar sesión -->
+                    <div class="row">
+                        <div class="col s12">
+                            <a href="{% url 'login:logout' %}" class="btn waves-effect waves-light red">
+                                <i class="material-icons left">exit_to_app</i>
+                                Cerrar sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
+{% endblock content %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}

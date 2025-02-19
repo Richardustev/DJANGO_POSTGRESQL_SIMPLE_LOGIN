@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
+
+# Usuario personalizado. Este modelo hereda los datos de la tabla User original, por ende, pueden añadirse campos adicionales
 class CustomUser(AbstractUser):
     # Campos adicionales (opcional)
     phone_number = models.CharField(max_length=15, blank=True, null=True)

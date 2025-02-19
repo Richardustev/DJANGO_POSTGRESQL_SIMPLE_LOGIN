@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Simple Login{% endblock %}</title>
+    
+    <!-- Incluye aquí tus librerías CSS globales -->
+    <link rel="stylesheet" href="{% static 'vendor/materialize/css/materialize.min.css' %}">
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+    <main>
+        {% block content %}
+        <!-- El contenido específico de cada página se insertará aquí -->
+        {% endblock %}
+    </main>
+
+    <!-- Incluye Materialize JS local -->
+    <script src="{% static 'vendor/materialize/js/materialize.min.js' %}"></script>
+    <!-- Incluye aquí tus librerías JavaScript globales -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+<style>
+    
+</style>
+</html>

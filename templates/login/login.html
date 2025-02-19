@@ -1,17 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <h2>Iniciar sesión</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Iniciar sesión</button>
-    </form>
-    <p>¿No tienes una cuenta? <a href="{% url 'login:register' %}">Regístrate aquí</a></p>
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<body style="background-color: #ff6f61;">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 offset-m3">
+                <div class="card-panel center-align">
+                    <h2>Iniciar sesión</h2><br>
+                    <form method="post">
+                        {% csrf_token %}
+                        <!-- Renderizar campos manualmente -->
+                        <div class="input-field">
+                            {{ form.username.label_tag }}
+                            {{ form.username }}
+                            {% if form.username.errors %}
+                                <div class="error">{{ form.username.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="input-field">
+                            {{ form.password.label_tag }}
+                            {{ form.password }}
+                            {% if form.password.errors %}
+                                <div class="error">{{ form.password.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Mostrar errores no asociados a un campo específico -->
+                        {% if form.non_field_errors %}
+                            <div class="error">
+                                {% for error in form.non_field_errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        <button class="btn waves-effect waves-light blue" type="submit">Iniciar sesión</button>
+                    </form>
+                    <p>¿No tienes una cuenta? <a href="{% url 'login:register' %}">Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
+{% endblock content %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}

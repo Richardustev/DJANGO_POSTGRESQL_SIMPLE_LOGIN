@@ -1,17 +1,67 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-</head>
-<body>
-    <h2>Registro</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Registrarse</button>
-    </form>
-    <p>¿Ya tienes una cuenta? <a href="{% url 'login:login' %}">Inicia sesión aquí</a></p>
+{% extends 'base.html' %}
+
+{% block title %}Registro{% endblock %}
+
+{% block content %}
+<body style="background-color: #6b5b95;">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 offset-m3">
+                <div class="card-panel center-align" style="">
+                    <h2>Registro</h2><br>
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <!-- Renderizar campos manualmente -->
+                        <div class="input-field">
+                            {{ form.username.label_tag }}
+                            {{ form.username }}
+                            {% if form.username.errors %}
+                                <div class="error">{{ form.username.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="input-field">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                            {% if form.email.errors %}
+                                <div class="error">{{ form.email.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="input-field">
+                            {{ form.phone_number.label_tag }}
+                            {{ form.phone_number }}
+                            {% if form.phone_number.errors %}
+                                <div class="error">{{ form.phone_number.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="input-field">
+                            {{ form.password.label_tag }}
+                            {{ form.password }}
+                            {% if form.password.errors %}
+                                <div class="error">{{ form.password.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="input-field">
+                            {{ form.confirm_password.label_tag }}
+                            {{ form.confirm_password }}
+                            {% if form.confirm_password.errors %}
+                                <div class="error">{{ form.confirm_password.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <button class="btn waves-effect waves-light purple" type="submit" style="width: 100%;">Registrarse</button>
+                    </form>
+                    <p>¿Ya tienes una cuenta? <a href="{% url 'login:login' %}">Inicia sesión aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
+{% endblock content %}
+
+{% block extra_css %}
+{% endblock %}
