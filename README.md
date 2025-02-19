@@ -2,6 +2,10 @@
 A simple login page created in Django, perfect for recycling in future projects. Built in an afternoon of boredom, this application is designed to be flexible and easy to adapt to different databases. While it was originally developed using a PostgreSQL database, it can be easily configured to work with other databases by referring to the relevant documentation.
 
 ## ✨ Features
+Customizable Usermodel. "Login/models.py CustomUser"
+
+Simple but clear inteface. (locally installed Materialize)
+
 Simple and Clean Design: Easy-to-use login interface.
 
 Flexible Database Configuration: Originally built for PostgreSQL, but can be adapted to other databases.
