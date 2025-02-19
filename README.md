@@ -50,7 +50,7 @@ This login page can be used as a starting point for any project requiring user a
 
 ## Screenshots
 ### Home Page
-![image](https://github.com/user-attachments/assets/c26c87b9-3e6a-4b38-8690-87ce69e3cf02)
+![image](https://github.com/user-attachments/assets/8cb3251a-cd3f-4dd6-8957-7ff36350e8b8)
 
 ### LogIn
 ![image](https://github.com/user-attachments/assets/1dd2cc6c-2ca0-4910-a769-1568d010e3fe)
