@@ -47,3 +47,20 @@ Open your browser and go to http://127.0.0.1:8000/ to see the login page in acti
 
 ## 🚀 Usage
 This login page can be used as a starting point for any project requiring user authentication. Feel free to customize and extend it to fit your needs.
+
+## Screenshots
+### Home Page
+![image](https://github.com/user-attachments/assets/c26c87b9-3e6a-4b38-8690-87ce69e3cf02)
+
+### LogIn
+![image](https://github.com/user-attachments/assets/1dd2cc6c-2ca0-4910-a769-1568d010e3fe)
+
+### Register
+![image](https://github.com/user-attachments/assets/03522b72-0f03-4318-84f4-fa40b30db435)
+
+### Dashboard (placeholder)
+![image](https://github.com/user-attachments/assets/f49f8ceb-031a-469b-b261-58bb193ee44c)
+
+
+
+
