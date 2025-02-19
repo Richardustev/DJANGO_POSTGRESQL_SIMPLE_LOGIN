@@ -82,9 +82,9 @@ DATABASES = {
     }
 }
 
-
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
+# Variable para habilitar o deshabilitar la verificación de duplicados en el registro de usuarios
+VERIFICAR_DUPLICADOS = True  # Cambia a False si no quieres verificar duplicados
+# Base de datos de usuario custom
 AUTH_USER_MODEL = 'login.CustomUser'
 
 AUTH_PASSWORD_VALIDATORS = [
