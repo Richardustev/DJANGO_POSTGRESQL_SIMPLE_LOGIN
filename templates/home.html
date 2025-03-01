@@ -3,15 +3,15 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<body style="background-color: #ff6f61;">
+<body style="background-color: #c87770;">
     <div class="container">
         <div class="row">
             <div class="col s12 m6 offset-m3">
                 <div class="card-panel center-align">
-                    <h2 class="flow-text">Bienvenido a la página de inicio</h2>
-                    <p class="flow-text">Por favor, inicia sesión para continuar.</p>
-                    <a href="{% url 'login:login' %}" class="btn waves-effect waves-light blue">Iniciar sesión</a>
-                    <p class="flow-text">¿No tienes una cuenta? <a href="{% url 'login:register' %}">Regístrate aquí</a></p>
+                    <h2 class="flow-text"><b>Welcome to the homepage</b></h2>
+                    <p class="flow-text">Please log in to continue.</p>
+                    <a href="{% url 'login:login' %}" class="btn waves-effect waves-light blue">Log in</a>
+                    <p class="flow-text">Don't have an account? <a href="{% url 'login:register' %}">Sign up here</a></p>
                 </div>
             </div>
         </div>

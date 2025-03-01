@@ -8,10 +8,10 @@
         <div class="row">
             <div class="col s12 m6 offset-m3">
                 <div class="card-panel center-align">
-                    <h2>Iniciar sesión</h2><br>
+                    <h2>Log In</h2><br>
                     <form method="post">
                         {% csrf_token %}
-                        <!-- Renderizar campos manualmente -->
+                        <!-- Render fields manually -->
                         <div class="input-field">
                             {{ form.username.label_tag }}
                             {{ form.username }}
@@ -28,7 +28,7 @@
                             {% endif %}
                         </div>
 
-                        <!-- Mostrar errores no asociados a un campo específico -->
+                        <!-- Show non-field errors -->
                         {% if form.non_field_errors %}
                             <div class="error">
                                 {% for error in form.non_field_errors %}
@@ -36,9 +36,9 @@
                                 {% endfor %}
                             </div>
                         {% endif %}
-                        <button class="btn waves-effect waves-light blue" type="submit">Iniciar sesión</button>
+                        <button class="btn waves-effect waves-light blue" type="submit">Log In</button>
                     </form>
-                    <p>¿No tienes una cuenta? <a href="{% url 'login:register' %}">Regístrate aquí</a></p>
+                    <p>Don't have an account? <a href="{% url 'login:register' %}">Sign up here</a></p>
                 </div>
             </div>
         </div>

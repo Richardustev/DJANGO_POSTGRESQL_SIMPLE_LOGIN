@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Registro{% endblock %}
+{% block title %}Register{% endblock %}
 
 {% block content %}
 <body style="background-color: #6b5b95;">
@@ -8,11 +8,11 @@
         <div class="row">
             <div class="col s12 m6 offset-m3">
                 <div class="card-panel center-align" style="">
-                    <h2>Registro</h2><br>
+                    <h2>Register</h2><br>
                     <form method="post">
                         {% csrf_token %}
                         
-                        <!-- Renderizar campos manualmente -->
+                        <!-- Render fields manually -->
                         <div class="input-field">
                             {{ form.username.label_tag }}
                             {{ form.username }}
@@ -53,9 +53,9 @@
                             {% endif %}
                         </div>
 
-                        <button class="btn waves-effect waves-light purple" type="submit" style="width: 100%;">Registrarse</button>
+                        <button class="btn waves-effect waves-light purple" type="submit" style="width: 100%;">Register</button>
                     </form>
-                    <p>¿Ya tienes una cuenta? <a href="{% url 'login:login' %}">Inicia sesión aquí</a></p>
+                    <p>Already have an account? <a href="{% url 'login:login' %}">Log in here</a></p>
                 </div>
             </div>
         </div>
